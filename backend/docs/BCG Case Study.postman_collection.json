@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "68da4dba-3672-4dc3-a8b8-7ce659bab8b7",
+		"name": "BCG Case Study",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8744309"
+	},
+	"item": [
+		{
+			"name": "Update electricity connections",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"applicant_name\": \"Sunny changed again\",\n        \"gender\": \"Male\",\n        \"pincode\": 110034,\n        \"govt_id_type\": \"PAN\",\n        \"category\": \"Commerical\",\n        \"date_of_application\": \"2021-10-30\",\n        \"modified_date\": \"2021-11-30\",\n        \"reviewer_id\": 1311,\n        \"reviewer_comments\": \"Documents verification in progress\",\n        \"district\": \"North\",\n        \"state\": \"DELHI\",\n        \"ownership\": \"JOINT\",\n        \"id_number\": 3757059,\n        \"load_applied_in_kv\": 7,\n        \"date_of_approval\": \"2021-11-30\",\n        \"status\": \"Pending\",\n        \"reviewer_name\": \"Sudhanshu Gupta\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/electricity-connection/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"electricity-connection",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get electricity connections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/electricity-connection?limit=15&skip=0&start_date=2021-09-30&end_date=2021-09-30&applicant_name=DAPHNE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"electricity-connection"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "15"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "start_date",
+							"value": "2021-09-30"
+						},
+						{
+							"key": "end_date",
+							"value": "2021-09-30"
+						},
+						{
+							"key": "applicant_name",
+							"value": "DAPHNE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
